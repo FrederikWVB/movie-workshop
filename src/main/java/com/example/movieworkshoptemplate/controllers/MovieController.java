@@ -38,9 +38,8 @@ public class MovieController {
 
     @GetMapping("/getrandom")
     public String getRandom(){
-        int rand = Movie.randInt(1, 1500);
-
         ArrayList<Movie> movieList = MovieDataRepository.readResources();
+        int rand = Movie.randInt(1, movieList.size());
 
         String randMovie = movieList.get(rand).toString();
 
@@ -52,6 +51,7 @@ public class MovieController {
         ArrayList<Movie> movieList = MovieDataRepository.readResources();
         ArrayList<Movie> tenList = new ArrayList<>();
 
+        //Pulls 1 random movie at a time, and sorts it into tenList
         for (int i = 0; i < 10; i++){
             int rand = Movie.randInt(1, movieList.size());
             Movie tmp = movieList.get(rand);
@@ -101,7 +101,6 @@ public class MovieController {
             int count =0;
 
             if(currMovie.indexOf(x) != -1){
-
                 for(int j=0; j < currMovie.length(); j++){
                     if(currMovie.charAt(j) == x){
                         count++;
