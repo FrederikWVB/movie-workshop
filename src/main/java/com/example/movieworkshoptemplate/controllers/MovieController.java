@@ -14,16 +14,17 @@ public class MovieController {
     @GetMapping("/")
     public String index(){
 
-        String one = " <a href=\"/getfirst\">getFirst</a> <br>";
-        String two = " <a href=\"/getrandom\">getRandom</a> <br>";
-        String three = " <a href=\"/gettensortbypopularirty\">getTenSortByPopularity</a> <br>";
-        String four = " <a href=\"/howmanywonanaward\">howManyWonAnAward</a> <br>";
-        String five = " <a href=\"/filter?first=x&second=1\">/filter?first=x&second=1</a> <br>";
-        String six = " <a href=\"/getfirst\">getFirst</a> <br>";
+        String one = " <a href=\"/getfirst\">getFirst (opgave 1)</a> <br>";
+        String two = " <a href=\"/getrandom\">getRandom (opgave 2)</a> <br>";
+        String three = " <a href=\"/gettensortbypopularirty\">getTenSortByPopularity (opgave 3)</a> <br>";
+        String four = " <a href=\"/howmanywonanaward\">howManyWonAnAward (opgave 4)</a> <br>";
+        String five = " <a href=\"/filter?first=x&second=1\">filter?first=x&second=1 (opgave 5)</a> <br>";
+        String author = "<br>Author: <a href=\"https://github.com/FrederikWVB\">Github @FrederikWVB</a> <br>";
+        String origAuthor = "Fork of: <a href=\"https://github.com/nicklasdean/movie-workshop\">https://github.com/nicklasdean/movie-workshop</a> <br>";
 
 
-        return "<h2>Hello World welcome to my application</h2><br>" +
-                one + two + three + four + five;
+        return "<h2>Welcome to the Movie Workshop</h2><br>" +
+                one + two + three + four + five + author + origAuthor;
     }
 
     @GetMapping("/getfirst")
